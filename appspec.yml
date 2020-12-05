@@ -1,6 +1,10 @@
 version: 0.0
 os: linux
 
+files:
+  - source: /
+    destination: /home/ubuntu/github/t2delivery
+
 hooks:
   BeforeInstall:
     - location: aws-codedeploy/scripts/before_install.sh
