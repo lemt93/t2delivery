@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+
+hooks:
+  BeforeInstall:
+    - location: aws-codedeploy/scripts/before_install.sh
+      timeout: 300
+      runas: ubuntu
+  AfterInstall:
+    - location: aws-codedeploy/scripts/after_install.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: aws-codedeploy/scripts/application_start.sh
+      timeout: 300
+      runas: ubuntu
